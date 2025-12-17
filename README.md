@@ -6,13 +6,13 @@ Repository ini berisi dokumentasi perjalanan saya menyelesaikan tantangan coding
 
 | Hari | Topik | Project | Status |
 | :---: | :--- | :--- | :---: |
-| 01 | Basic Syntax | Unit Converter | ✅ |
-| 02 | Logic | Simple Calculator | ✅ |
-| 03 | Modules | Password Generator | ⏳ |
-| 04 | Conditionals | Rock, Paper, Scissors | ⬜ |
-| 05 | Strings | Palindrome Checker | ⬜ |
+| 01 | Basic Syntax | Unit Converter |  |
+| 02 | Logic | Simple Calculator |  |
+| 03 | Modules | Password Generator |  |
+| 04 | Conditionals | Rock, Paper, Scissors |  |
+| 05 | Strings | Palindrome Checker |  |
 | ... | ... | ... | ... |
-| 30 | Final Project | Expense Tracker App | ⬜ |
+| 30 | Final Project | Expense Tracker App |  |
 
 *(Catatan: Update tabel ini setiap kali Anda menyelesaikan tantangan dengan mengganti emoji)*
 

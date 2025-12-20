@@ -1,10 +1,9 @@
 import os
-import sys
 
 def menu_utama():
     print(f"""
     {"="*47}
-    {"====Selamat Datang di Program Konversi Suhu====".center(47)}
+    {"Selamat Datang di Program Konversi Suhu".center(47)}
     {"="*47}
     {"Titik beku dan titik didih masing masing suhu".center(47)}
 

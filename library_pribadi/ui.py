@@ -7,4 +7,4 @@ def clear_screen():
         os.system('clear')
 
 def kembali():
-    input("\nTekan ENTER untuk kembali ke menu utama...")
+    input("\nTekan ENTER untuk kembali...")

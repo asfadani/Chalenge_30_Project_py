@@ -1,3 +1,12 @@
+from password_generator import PasswordGenerator
+
+kecil = input("Huruf kecil : ")
+
+pwo = PasswordGenerator()
+pwo.maxlen = 8
+pwo.excludelchars = kecil
+print(pwo.generate())
+
 data = {
     'akun' : "asfadani",
     'password' : "khusuu219898" 

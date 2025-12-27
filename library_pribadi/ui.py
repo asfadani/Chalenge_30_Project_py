@@ -8,3 +8,8 @@ def clear_screen():
 
 def kembali():
     input("\nTekan ENTER untuk kembali...")
+
+def lagi():
+    sudah = input("\nTambah daftar lagi (y/n)? ").lower()
+    if sudah != "y":
+        return

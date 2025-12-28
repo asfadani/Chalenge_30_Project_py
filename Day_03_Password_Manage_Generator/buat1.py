@@ -1,11 +1,11 @@
 from password_generator import PasswordGenerator
 
-kecil = input("Huruf kecil : ")
+# kecil = input("Huruf kecil : ")
 
-pwo = PasswordGenerator()
-pwo.maxlen = 8
-pwo.excludelchars = kecil
-print(pwo.generate())
+# pwo = PasswordGenerator()
+# pwo.maxlen = 8
+# pwo.excludelchars = kecil
+# print(pwo.generate())
 
 data = {
     'akun' : "asfadani",
@@ -17,7 +17,7 @@ aplikasi = {
 }
 
 
-print(f"{"Aplikasi":<15} {"Akun":<15} {"Password":<15} \n{"="*50}")
+print(f"{"Aplikasi":<15} {"Akun":<25} {"Password":<15} \n{"="*50}")
 if not aplikasi:
     print("tidak ada aplikasi dan password terdaftar")
 else:
@@ -25,4 +25,4 @@ else:
         Akun = aplikasi[key]['akun']
         Password = aplikasi[key]['password']
 
-        print(f"{key:<15} {Akun:<15} {Password:<15}")
+        print(f"{key:<15} {Akun:<25} {Password:<15}")

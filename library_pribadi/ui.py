@@ -7,7 +7,7 @@ def clear_screen():
         os.system('clear')
 
 def kembali():
-    input("\nTekan ENTER untuk kembali...")
+    input("\nTekan ENTER untuk melannjutkan...")
 
 def lagi():
     sudah = input("\nTambah daftar lagi (y/n)? ").lower()

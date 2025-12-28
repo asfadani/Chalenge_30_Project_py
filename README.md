@@ -8,7 +8,7 @@ Repository ini berisi dokumentasi perjalanan saya menyelesaikan tantangan coding
 | :---: | :--- | :--- | :---: |
 | 01 | Basic Syntax | Unit Converter | selesai |
 | 02 | Logic | Simple Calculator | selesai |
-| 03 | Modules | Password Generator | progres |
+| 03 | Modules | Password Generator | selesai |
 | 04 | Conditionals | Rock, Paper, Scissors |  |
 | 05 | Strings | Palindrome Checker |  |
 | ... | ... | ... | ... |

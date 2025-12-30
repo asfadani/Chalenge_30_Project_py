@@ -9,7 +9,7 @@ Repository ini berisi dokumentasi perjalanan saya menyelesaikan tantangan coding
 | 01 | Basic Syntax | Unit Converter | selesai |
 | 02 | Logic | Simple Calculator | selesai |
 | 03 | Modules | Password Generator | selesai |
-| 04 | Conditionals | Rock, Paper, Scissors |  |
+| 04 | Conditionals | Rock, Paper, Scissors | selesai |
 | 05 | Strings | Palindrome Checker |  |
 | ... | ... | ... | ... |
 | 30 | Final Project | Expense Tracker App |  |

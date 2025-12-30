@@ -10,6 +10,14 @@ def kembali():
     input("\nTekan ENTER untuk melannjutkan...")
 
 def lagi():
-    sudah = input("\nTambah daftar lagi (y/n)? ").lower()
+    sudah = input("\nLagi (y/n)? ").lower()
     if sudah != "y":
-        return
+        sudah = True
+        return sudah
+    
+"""
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from library_pribadi import ui
+"""

@@ -34,7 +34,7 @@ def generator(panjang, kapital, lower, angka, schar):
 class Fitur():
     @staticmethod
     def tampilkan_daftar():
-        print(f"{"Aplikasi":<15} {"Akun":<20} {"Password":<15} \n{"="*50}")
+        print(f"{'Aplikasi':<15} {'Akun':<20} {'Password':<15} \n{'='*50}")
         if not daftar:
             print("Tidak ada data terdaftar")
         else:
@@ -46,7 +46,6 @@ class Fitur():
     @staticmethod
     def generator_password():
         while True:
-            akun = dict.fromkeys(tempalte_akunmanager.keys())
             try:
                 aplikasi = input("Masukkan nama aplikasi : ")
                 akunnya = input("Masukkan alamat akun : ")
@@ -56,22 +55,26 @@ class Fitur():
                     pw = generator(panjang, *hasil_kecuali)
                 else:
                     pw = generator(panjang, "", "", "", "")
+                print(f"Password generated : {pw}")
             except Exception as e:
                 print(f"\nTerjadi error: {e}")
                 print(f"Tipe error: {type(e)}")
                 print("Silakan ulangi input data.\n")
                 continue
-        
-            akun['Akun'] = akunnya
-            akun['Password'] = pw
-
-            count = 0
+                
+            akun_data = {
+                'Akun' : akunnya,
+                'Password' : pw
+            }   
+            
+            count = 1
             key_aplikasi = aplikasi
-            if aplikasi in daftar:
-                aplikasi = f"{aplikasi}{count}"
-                daftar.update({aplikasi:akun})
+            while key_aplikasi in daftar:
+                key_aplikasi = f"{aplikasi}_{count}"
                 count += 1
-            daftar.update({aplikasi:akun})
+            if key_aplikasi != aplikasi:
+                print(f"Info: Nama '{aplikasi}' sudah ada. Disimpan sebagai '{key_aplikasi}'")
+            daftar[key_aplikasi] = akun_data
    
             for key, value in daftar.items():
                 print("Data telah terdaftar")
@@ -120,7 +123,7 @@ class Fitur():
                             print("\nAkun berhasil diperbarui")
                             tanya_lagi = True
                         else:
-                            print(f"\nData aplikasi {baru} tidak ditemukan")
+                            print(f"\nData aplikasi {app_akun} tidak ditemukan")
 
                 elif ubah in ["back", "b"]:
                     break

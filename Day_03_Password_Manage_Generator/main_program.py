@@ -3,8 +3,8 @@ import allprogram_home
 
 def menu():
     print(f"""
-    {"SELAMAT DATANG DI PROGRAM PASSWORD MANAGER".center(50)}
-    {"="*50}
+    {'SELAMAT DATANG DI PROGRAM PASSWORD MANAGER'.center(50)}
+    {'='*50}
     1. Lihat daftar akun dan password
     2. Generaor password
     3. Update / delete
@@ -31,16 +31,17 @@ def program():
                 continue
             elif pilihan == "2":
                 ui.clear_screen()
-                print(f"{"-"*50}\n{"Generator Password".center(50)}\n{"-"*50}")
+                print(f"{'-'*50}\n{'Generator Password'.center(50)}\n{'-'*50}")
                 allprogram_home.Fitur.generator_password()
             elif pilihan == "3":
                 ui.clear_screen()
-                print(f"{"-"*50}\n{"Manajemen Password".center(50)}\n{"-"*50}\n")           
+                print(f"{'-'*50}\n{'Manajemen Password'.center(50)}\n{'-'*50}\n")           
                 allprogram_home.Fitur.update_delete()
             elif pilihan == "4":
                 ui.clear_screen()
                 print("TERIMAKASIH TELAH MENGGUNAKAN PROGRAM SEDERHANA PASWORD MANAJEMEN")
-                exit()
+                # exit()
+                return
             else:
                 print("Input pilihan tidak sesuai. Harapan masukan angka 1/2/3/4 !")
                 ui.kembali()

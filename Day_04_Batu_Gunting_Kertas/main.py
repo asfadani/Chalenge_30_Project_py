@@ -14,40 +14,44 @@ def menu():
 {'-'*50}
     """)
 
-while True:
-    ui.clear_screen()
-    menu()
-    com = logic.pilihan_com()
-    ada_hasil = False
+def game():
     while True:
-        inputan = input("Silahkan pilih (Batu/Gunting/Kertas) : ").lower()
-        orang = logic.pilihan_orang(inputan)
-
-        if orang is not None:
-            break
-        print("Input tidak valid")
-
-    hasil = logic.orang_menang(com, orang)
-
-    ui.clear_screen()
-    print(f"""
-{'='*40}
-Komputer memilih : {com.upper()}
-Anda memilih : {orang.upper()}
-{'='*40}
-    """)
-    
-    if hasil == "seri":
-        print(f"{'HASIL SERI'.center(40)}")
-    elif hasil == "menang":
-        print(f"{'SELAMAT ANDA MENANG'.center(40)}")
-    else:
-        print(f"{'YAH ANDA KALAH'.center(40)}")
-    ada_hasil = True
-
-    if ada_hasil == True:
-        sudah = ui.lagi()
         ui.clear_screen()
-        if sudah == True:
-            print("terimakasih sudah bermain!".upper())
-            break
+        menu()
+        com = logic.pilihan_com()
+        ada_hasil = False
+        while True:
+            inputan = input("Silahkan pilih (Batu/Gunting/Kertas) : ").lower()
+            orang = logic.pilihan_orang(inputan)
+
+            if orang is not None:
+                break
+            print("Input tidak valid")
+
+        hasil = logic.orang_menang(com, orang)
+
+        ui.clear_screen()
+        print(f"""
+    {'='*40}
+    Komputer memilih : {com.upper()}
+    Anda memilih : {orang.upper()}
+    {'='*40}
+        """)
+        
+        if hasil == "seri":
+            print(f"{'HASIL SERI'.center(40)}")
+        elif hasil == "menang":
+            print(f"{'SELAMAT ANDA MENANG'.center(40)}")
+        else:
+            print(f"{'YAH ANDA KALAH'.center(40)}")
+        ada_hasil = True
+
+        if ada_hasil == True:
+            sudah = ui.lagi()
+            ui.clear_screen()
+            if sudah == True:
+                print("terimakasih sudah bermain!".upper())
+                break
+
+if __name__ == "__main__":
+    game()

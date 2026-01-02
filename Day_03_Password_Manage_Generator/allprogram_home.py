@@ -23,6 +23,7 @@ def kecuali():
 def generator(panjang, kapital, lower, angka, schar):
     pwg = PasswordGenerator()
     pwg.maxlen = panjang
+    pwg.minlen = 1
     pwg.excludeuchars = kapital
     pwg.excludelchars = lower
     pwg.excludenumbers = angka

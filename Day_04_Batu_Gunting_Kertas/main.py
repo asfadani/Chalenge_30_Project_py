@@ -8,30 +8,41 @@ pilihan = "batu", "gunting", "kertas"
 
 def menu():
     print(f"""
-{"-"*50}
-{"Selamat Datang di Program Game Sederhana".center(50)}
-{"batu gunting kertas".center(50).upper()}
-{"-"*50}
+{'-'*50}
+{'Selamat Datang di Program Game Sederhana'.center(50)}
+{'batu gunting kertas'.center(50).upper()}
+{'-'*50}
     """)
 
 while True:
+    ui.clear_screen()
     menu()
-    com = logic.pilihan_com(pilihan)
+    com = logic.pilihan_com()
     ada_hasil = False
-    try:
+    while True:
         inputan = input("Silahkan pilih (Batu/Gunting/Kertas) : ").lower()
         orang = logic.pilihan_orang(inputan)
-    except Exception as e:
-        print(f"Terjadi error: {e}")
-        print(f"Tipe error: {type(e)}")
-        ui.kembali()
-        ui.clear_screen()
-        continue
-    hasil_menang  = logic.orang_menang(com, orang)
-    hasil_kalah = logic.orang_kalah(com, orang)
-    seri = logic.hasil_seri(com, orang)
+
+        if orang is not None:
+            break
+        print("Input tidak valid")
+
+    hasil = logic.orang_menang(com, orang)
+
     ui.clear_screen()
-    logic.hasil(com, orang, hasil_menang, hasil_kalah, seri)
+    print(f"""
+{'='*40}
+Komputer memilih : {com.upper()}
+Anda memilih : {orang.upper()}
+{'='*40}
+    """)
+    
+    if hasil == "seri":
+        print(f"{'HASIL SERI'.center(40)}")
+    elif hasil == "menang":
+        print(f"{'SELAMAT ANDA MENANG'.center(40)}")
+    else:
+        print(f"{'YAH ANDA KALAH'.center(40)}")
     ada_hasil = True
 
     if ada_hasil == True:

@@ -10,7 +10,7 @@ Repository ini berisi dokumentasi perjalanan saya menyelesaikan tantangan coding
 | 02 | Logic | PEMDAS Calculator | selesai |
 | 03 | Modules | Password Generator | selesai |
 | 04 | Conditionals | Rock, Paper, Scissors | selesai |
-| 05 | Strings | Palindrome Checker |  |
+| 05 | Strings | The Hangman Game | progres |
 | ... | ... | ... | ... |
 | 30 | Final Project | Expense Tracker App |  |
 

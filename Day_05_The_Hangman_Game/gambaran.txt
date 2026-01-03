@@ -1,0 +1,109 @@
+===Tampilan Awal===
+
+SELAMAT DATANG.......
+=====================
+        +---+
+        |   |
+        O   |  <-- Gambar Dinamis
+       /|\  |
+            |
+        =========
+
+Level: Sulit
+Kata:  _ A _ _ _
+
+[ Info ]
+> Sisa Kesempatan: 2
+> Sudah Ditebak: [X, Z, P]
+> Pesan Terakhir: "Sayang sekali, huruf P tidak ada!"
+
+Jawaban anda (Huruf/Kata) :
+
+
+
+===Tampilan menang/kalah===
+
+
+SELAMAT ANDA MENANG/KALAH
+=========================
+Gambar hangman selamat/die
+
+-------------------------
+        *kata nya
+-------------------------
+
+selamat/sayang sekali anda
+berhasil/gagal menebak kata 
+*katanya dengan *kali kesempatan
+
+main lagi ?
+
+
+
+
+===END PROGRAM===
+
+TERIMAKASIH TELAH BERMAIN THE HANGMAN GAME!
+
+
+
+
+===CONTOH SAAT BERJALAN===
+
+jawaban = B A G U S
+
+SELAMAT DATANG.......
+=====================
+-----------------------
+Gambar hangman (dinamis)
+-----------------------
+
+Silahkan tebak kata
+berikut
+_ A _ _ _
+sisa kesempatan anda 3 kali
+
+jawaban anda : Patah -> (di .upper())
+
+-----------------------
+Gambar hangman (dinamis)
+-----------------------
+
+Silahkan tebak kata
+berikut
+_ A _ _ _
+sisa kesempatan anda 2 kali
+
+jawaban anda : batas -> (di .upper())
+
+
+-----------------------
+Gambar hangman (dinamis)
+-----------------------
+
+Silahkan tebak kata
+berikut
+B A _ _ S
+sisa kesempatan anda 2 kali
+
+jawaban anda : bagus -> (di .upper())
+
+
+clear_screen()
+
+SELAMAT ANDA MENANG/KALAH
+=========================
+Gambar hangman selamat
+
+-------------------------
+          BAGUS
+-------------------------
+
+selamat anda berhasil menebak kata 
+BAGUS dengan sisa  2 kali kesempatan
+
+main lagi ? n
+
+
+clear_screen()
+TERIMAKASIH TELAH BERMAIN THE HANGMAN GAME!

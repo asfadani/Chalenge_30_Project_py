@@ -26,6 +26,8 @@ kata_sulit = ["KOMPUTER", "TELEVISI", "JENDELA",  "LEMARI",    "SELIMUT",
 kata_random = kata_mudah + kata_normal + kata_sulit
 
 
+kata_rahasia = []
+
 def kesulitan(input_kesulitan):
     if input_kesulitan in ["mudah", "m"]:
         kata = random.choice(kata_mudah)
@@ -42,12 +44,55 @@ def kesulitan(input_kesulitan):
     else:
         return None
 
-def jawaban(input_jawaban, kata_jawaban):
-    jawab = list(input_jawaban)
-    if len(jawab) > len(kata_jawaban):
-        return None
-    for i, huruf in enumerate(kata_jawaban):
-        
+def tampilan_jawaban(kata_jawaban):
+    global kata_rahasia
+    if not kata_rahasia:
+        for huruf in kata_jawaban:
+            huruf = "_"
+            kata_rahasia.append(huruf)
+    return None
+    
 
-print("test")
-print(kesulitan("m"))
+def mencocokkan_huruf(jawaban_user, jawaban):
+    list(jawaban_user)
+    while jawaban_user in jawaban:
+        for i, huruf in enumerate(jawaban):
+            if jawaban_user == huruf:
+                return i
+        if len(jawaban_user) > 1:
+            for j, hrf_jwban in enumerate(jawaban_user):
+                if hrf_jwban in jawaban:
+                    return j
+    return None
+
+def reveal(indek_sama, jawaban_user):
+    while indek_sama is not None:
+        kata_rahasia[indek_sama] = jawaban_user
+    return
+
+level = input("pilih kesulitan(m,n,s,r) : ")
+lvl = kesulitan(level)
+
+count = 5
+while count > 0:
+    tampilan_jawaban(lvl)
+    print("Kata : ")
+    for i in kata_rahasia:
+        print(i, end="")
+    
+    print("\nINFO")
+    print(f"Kesempatan \t: {count}")
+    jwb_usr = input("Masukkan Huruf jawaban : ").upper()
+
+    hsl = mencocokkan_huruf(jwb_usr, lvl)
+    reveal(hsl, jwb_usr)
+    count -= 1
+
+if count == 0:
+    print(f"anda kalah, jawabannya {lvl}")
+
+
+
+
+
+

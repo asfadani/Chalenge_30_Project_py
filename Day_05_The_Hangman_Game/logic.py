@@ -30,7 +30,7 @@ kata_sulit = ["KOMPUTER", "TELEVISI", "JENDELA",  "LEMARI",    "SELIMUT",
 kata_random = kata_mudah + kata_normal + kata_sulit
 
 
-kata_rahasia = []
+# kata_rahasia = []
 
 def kesulitan(input_kesulitan):
     if input_kesulitan in ["mudah", "m"]:
@@ -73,21 +73,26 @@ def pesan(input_jwb, jawaban):
         terakhir = input_jwb[-1]
         if (len(terakhir) == 1 and terakhir in jawaban) or (terakhir == jawaban):
             print(f"Huruf/kata {terakhir} ada pada jawaban")
+        elif len(terakhir)>1:
+            "".split(terakhir)
+            print(f"Huruf/kata {terakhir} ada pada jawaban")
         else:
             print(f"Sayang sekali, huruf/kata {terakhir} salah!")
 
 
 def tampilan_jawaban(kata_jawaban):
-    global kata_rahasia
-    if not kata_rahasia:
-        for huruf in kata_jawaban:
-            huruf = "_"
-            kata_rahasia.append(huruf)
-    return None
-    
+    a = list(kata_jawaban)
+    hasil = []
+    for huruf in a:
+        huruf = "_"
+        hasil.append(huruf)
+    return "".join(hasil)
+    if not a:
+        return None
 
-def mencocokkan_huruf(jawaban_user, jawaban):
-    global kata_rahasia
+   
+
+def mencocokkan_huruf(jawaban_user, jawaban, kata_rahasia):
     if jawaban_user in jawaban:
         for i, huruf in enumerate(jawaban):
             if jawaban_user == huruf:

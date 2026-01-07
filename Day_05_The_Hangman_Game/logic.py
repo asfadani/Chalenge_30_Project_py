@@ -29,9 +29,6 @@ kata_sulit = ["KOMPUTER", "TELEVISI", "JENDELA",  "LEMARI",    "SELIMUT",
 
 kata_random = kata_mudah + kata_normal + kata_sulit
 
-
-# kata_rahasia = []
-
 def kesulitan(input_kesulitan):
     if input_kesulitan in ["mudah", "m"]:
         kata = random.choice(kata_mudah)
@@ -60,24 +57,35 @@ def tampilkan_kesulitan(input_kesulitan):
     else:
         return None 
 
-# def sudah_ditebak(input_jwb):
-#     if not input_jwb:
-#         return None
-#     else:
-#         return input_jwb[-1]
+
 
 def pesan(input_jwb, jawaban):
     if not input_jwb:
         print("Belum ada jawaban dikirim")
+        return False
     else:
         terakhir = input_jwb[-1]
         if (len(terakhir) == 1 and terakhir in jawaban) or (terakhir == jawaban):
-            print(f"Huruf/kata {terakhir} ada pada jawaban")
+            print(f"Huruf {terakhir} ada pada jawaban")
+            return False
         elif len(terakhir)>1:
-            "".split(terakhir)
-            print(f"Huruf/kata {terakhir} ada pada jawaban")
+            lebih1 = list(terakhir)
+            ada = []
+            tdk_ada = []
+            for huruf in lebih1:
+                if huruf in jawaban:
+                    ada.append(huruf)
+                else:
+                    tdk_ada.append(huruf)
+            if not ada:
+                print(f"Semua huruf {tdk_ada}  tidak terdapat pada jawaban!")
+                return True
+            elif ada and tdk_ada:
+                print(f"Huruf {ada} terdapat pada jawaban dan {tdk_ada} tidak!")
+                return False
         else:
-            print(f"Sayang sekali, huruf/kata {terakhir} salah!")
+            print(f"Sayang sekali, huruf {terakhir} salah!")
+            return True
 
 
 def tampilan_jawaban(kata_jawaban):
@@ -112,30 +120,30 @@ def menu():
 {'='*50}
 """)
 
-# if __name__ == "__main":
-#     level = input("pilih kesulitan(m,n,s,r) : ")
-#     lvl = kesulitan(level)
+if __name__ == "__main__":
+    level = input("pilih kesulitan(m,n,s,r) : ")
+    lvl = kesulitan(level)
 
-# count = 5
-# while count > 0:
-#     tampilan_jawaban(lvl)
-#     print("Kata : ")
-#     for i in kata_rahasia:
-#         print(i, end="")
-    
-#     print("\nINFO")
-#     print(f"Kesempatan \t: {count}")
-#     jwb_usr = input("Masukkan Huruf jawaban : ").upper()
+    count = 5
+    while count > 0:
+        tampilan_jawaban(lvl)
+        print("Kata : ")
+        for i in kata_rahasia:
+            print(i, end="")
+        
+        print("\nINFO")
+        print(f"Kesempatan \t: {count}")
+        jwb_usr = input("Masukkan Huruf jawaban : ").upper()
 
-#     mencocokkan_1huruf(jwb_usr, lvl)
-#     count -= 1
+        mencocokkan_1huruf(jwb_usr, lvl)
+        count -= 1
 
-# if count == 0:
-#     print(f"anda kalah, jawabannya {lvl}")
+    if count == 0:
+        print(f"anda kalah, jawabannya {lvl}")
 
-# sdh = ["j"]
-# jwb = "API"
-# pesan(sdh, jwb)
+    sdh = ["j"]
+    jwb = "API"
+    pesan(sdh, jwb)
 
 
 

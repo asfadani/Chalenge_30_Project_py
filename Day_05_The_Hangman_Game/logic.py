@@ -57,17 +57,13 @@ def tampilkan_kesulitan(input_kesulitan):
     else:
         return None 
 
-
-
 def pesan(input_jwb, jawaban):
     if not input_jwb:
         print("Belum ada jawaban dikirim")
-        return False
     else:
         terakhir = input_jwb[-1]
         if (len(terakhir) == 1 and terakhir in jawaban) or (terakhir == jawaban):
             print(f"Huruf {terakhir} ada pada jawaban")
-            return False
         elif len(terakhir)>1:
             lebih1 = list(terakhir)
             ada = []
@@ -78,15 +74,13 @@ def pesan(input_jwb, jawaban):
                 else:
                     tdk_ada.append(huruf)
             if not ada:
-                print(f"Semua huruf {tdk_ada}  tidak terdapat pada jawaban!")
-                return True
+                print(f"Semua huruf {tdk_ada} tidak terdapat pada jawaban!")
             elif ada and tdk_ada:
                 print(f"Huruf {ada} terdapat pada jawaban dan {tdk_ada} tidak!")
-                return False
+            elif ada and not tdk_ada:
+                print(f"Semua huruf {ada} terdapat pada jawaban!")
         else:
             print(f"Sayang sekali, huruf {terakhir} salah!")
-            return True
-
 
 def tampilan_jawaban(kata_jawaban):
     a = list(kata_jawaban)
@@ -97,8 +91,6 @@ def tampilan_jawaban(kata_jawaban):
     return "".join(hasil)
     if not a:
         return None
-
-   
 
 def mencocokkan_huruf(jawaban_user, jawaban, kata_rahasia):
     if jawaban_user in jawaban:
@@ -112,13 +104,6 @@ def mencocokkan_huruf(jawaban_user, jawaban, kata_rahasia):
                 kata_rahasia[index] = huruf_asli
         return kata_rahasia
     return None
-
-def menu():
-    print(f"""
-{'='*50}
-{'SELAMAT DATANG DI PERMAINAN THE HANGING GAME'.center(50)}
-{'='*50}
-""")
 
 if __name__ == "__main__":
     level = input("pilih kesulitan(m,n,s,r) : ")

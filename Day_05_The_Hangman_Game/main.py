@@ -37,9 +37,8 @@ while True:
         if len(jwb_usr) == 1 :
             if jwb_usr not in lvl:
                 count -= 1
-        elif len(jwb_usr) > 1 :
-            cek = list(filter(lambda x: x in lvl, jwb_usr))
-            if not cek:
+        elif len(jwb_usr) == len(lvl):
+            if jwb_usr != lvl:
                 count -= 1
 
         logic.mencocokkan_huruf(jwb_usr, lvl, kata_rahasia)

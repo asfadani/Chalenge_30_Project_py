@@ -64,23 +64,12 @@ def pesan(input_jwb, jawaban):
         terakhir = input_jwb[-1]
         if (len(terakhir) == 1 and terakhir in jawaban) or (terakhir == jawaban):
             print(f"Huruf {terakhir} ada pada jawaban")
-        elif len(terakhir)>1:
-            lebih1 = list(terakhir)
-            ada = []
-            tdk_ada = []
-            for huruf in lebih1:
-                if huruf in jawaban:
-                    ada.append(huruf)
-                else:
-                    tdk_ada.append(huruf)
-            if not ada:
-                print(f"Semua huruf {tdk_ada} tidak terdapat pada jawaban!")
-            elif ada and tdk_ada:
-                print(f"Huruf {ada} terdapat pada jawaban dan {tdk_ada} tidak!")
-            elif ada and not tdk_ada:
-                print(f"Semua huruf {ada} terdapat pada jawaban!")
+        elif len(terakhir) > 1 and len(terakhir) != len(jawaban):
+            print(f"Masukkan hanya 1 huruf atau satu kata!")
+        elif len(terakhir) == len(jawaban):
+            print(f"Kata {terakhir} salah!")
         else:
-            print(f"Sayang sekali, huruf {terakhir} salah!")
+            print(f"Sayang sekali, huruf/kata {terakhir} salah!")
 
 def tampilan_jawaban(kata_jawaban):
     a = list(kata_jawaban)
@@ -88,9 +77,9 @@ def tampilan_jawaban(kata_jawaban):
     for huruf in a:
         huruf = "_"
         hasil.append(huruf)
-    return "".join(hasil)
     if not a:
         return None
+    return hasil
 
 def mencocokkan_huruf(jawaban_user, jawaban, kata_rahasia):
     if jawaban_user in jawaban:
@@ -98,37 +87,23 @@ def mencocokkan_huruf(jawaban_user, jawaban, kata_rahasia):
             if jawaban_user == huruf:
                 kata_rahasia[i] = jawaban_user
         return kata_rahasia
-    if len(jawaban_user) > 1:
-        for index, huruf_asli in enumerate (jawaban):
-            if huruf_asli in jawaban_user:
+    if len(jawaban_user) == len(jawaban):
+        jwbn = list(jawaban_user)
+        if jwbn == jawaban :
+            for index, huruf_asli in enumerate (jawaban):
                 kata_rahasia[index] = huruf_asli
-        return kata_rahasia
+            return kata_rahasia
     return None
 
 if __name__ == "__main__":
-    level = input("pilih kesulitan(m,n,s,r) : ")
-    lvl = kesulitan(level)
+    jawaban = "AYAM"
+    kunci = ["A", "Y", "A", "M"]
+    rahasia = ["_", "_", "_", "_"]
 
-    count = 5
-    while count > 0:
-        tampilan_jawaban(lvl)
-        print("Kata : ")
-        for i in kata_rahasia:
-            print(i, end="")
-        
-        print("\nINFO")
-        print(f"Kesempatan \t: {count}")
-        jwb_usr = input("Masukkan Huruf jawaban : ").upper()
-
-        mencocokkan_1huruf(jwb_usr, lvl)
-        count -= 1
-
-    if count == 0:
-        print(f"anda kalah, jawabannya {lvl}")
-
-    sdh = ["j"]
-    jwb = "API"
-    pesan(sdh, jwb)
+    print(rahasia)
+    print("++++")
+    mencocokkan_huruf(jawaban, kunci, rahasia)
+    print(rahasia)
 
 
 

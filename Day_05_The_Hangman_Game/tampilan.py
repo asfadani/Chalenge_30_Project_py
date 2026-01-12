@@ -59,7 +59,7 @@ TAHAPAN_GAMBAR = [
 def ambil_gambar(sisa_nyawa):
     index = 5 - sisa_nyawa
 
-    if index > 6 : index = 6
+    if index > 5 : index = 5
     if index < 0 : index = 0
 
     return TAHAPAN_GAMBAR[index]

@@ -56,14 +56,14 @@ while True:
         if count == 0 and "_" in kata_rahasia:
             logic.ui.clear_screen()
             print(f"{'='*50}")
-            print(f"{'SELAMAT ANDA MENANG!'.center(50)}")
+            print(f"{'Sayang Sekali Anda Kalah'.center(50)}")
             print(f"{'-'*50}")
             print(f"\t\t{tampilan.ambil_gambar(count)}")
             print(f"jawabannya\t: {lvl}\nJawaban anda\t: {kata_rahasia}\nTrack jawaban\t: {sudah}\nSisa nyawa\t: {count}")
             print(f"{'='*50}")
             break
 
-    if logic.ui.lagi():
+    if logic.ui.selesai():
         logic.ui.clear_screen()
         print("Terimakasih sudah bermain")
         break

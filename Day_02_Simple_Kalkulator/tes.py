@@ -83,6 +83,6 @@ while True:
             except ValueError:
                 print("Harus angka!")
 
-    if  ui.lagi():
+    if  ui.selesai():
         print("terimakasih sudah bermain!".upper())
         break

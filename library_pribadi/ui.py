@@ -9,7 +9,7 @@ def clear_screen():
 def kembali():
     input("\nTekan ENTER untuk melannjutkan...")
 
-def lagi():
+def selesai():
     sudah = input("\nLagi (y/n)? ").lower()
     if sudah != "y":
         sudah = True

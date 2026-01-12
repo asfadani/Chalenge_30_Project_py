@@ -47,7 +47,7 @@ def game():
         ada_hasil = True
 
         if ada_hasil == True:
-            sudah = ui.lagi()
+            sudah = ui.selesai()
             ui.clear_screen()
             if sudah == True:
                 print("terimakasih sudah bermain!".upper())

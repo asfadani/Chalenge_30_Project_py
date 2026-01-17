@@ -1,3 +1,5 @@
+# JALANKAN KODE DARI SINI
+
 from setup import ui
 import csv
 import os
@@ -6,7 +8,7 @@ folder = os.path.dirname(os.path.abspath(__file__))
 file_csv =os.path.join(folder, "data_admin.csv") 
 
 
-# load csv
+
 def load_csv():
     if not os.path.exists(file_csv):
         return []

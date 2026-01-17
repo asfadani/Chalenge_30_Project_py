@@ -40,8 +40,8 @@ def program():
             elif pilihan == "4":
                 ui.clear_screen()
                 print("TERIMAKASIH TELAH MENGGUNAKAN PROGRAM SEDERHANA PASWORD MANAJEMEN")
-                # exit()
-                return
+                exit()
+                # return
             else:
                 print("Input pilihan tidak sesuai. Harapan masukan angka 1/2/3/4 !")
                 ui.kembali()

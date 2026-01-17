@@ -11,7 +11,7 @@ Repository ini berisi dokumentasi perjalanan saya menyelesaikan tantangan coding
 | 03 | Modules | Password Generator | selesai |
 | 04 | Conditionals | Rock, Paper, Scissors | selesai |
 | 05 | Strings | The Hangman Game | selesai |
-| 06 | File Handling | Password Generator (local storage) | progres |
+| 06 | File Handling | Password Generator (local storage) Day_03 | selesai |
 | ... | ... | ... | ... |
 | 30 | Final Project | Expense Tracker App |  |
 

@@ -15,6 +15,24 @@ def selesai():
         sudah = True
         return sudah
     
+def cari_index(dicari, data_list):
+    for index, isi in enumerate(data_list):
+        for key in isi.items():
+            if dicari in key:
+                return index
+
+def cari_key(dicari, data_dict):
+    for key, value in data_dict.items():
+        if value == dicari:
+            return key
+
+def ada_tidak(dicari, data):
+    for cari in data:
+        for key, value in cari.items():
+            if value == dicari:
+                return True
+     
+
 """
 import sys
 import os

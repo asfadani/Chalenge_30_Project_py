@@ -3,3 +3,4 @@ __pychace__/
 *.pyc
 .env
 .DS_Store
+learning/

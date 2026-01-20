@@ -93,19 +93,25 @@ class Fitur():
                         print(f"Tipe error: {type(e)}")
                         continue
                 elif ubah in ["update", "up", "u"]:
-                    try:
-                        pilih = int(input("\nData ke berapa yang akan dirubah: "))
-                        index = pilih - 1
-                        opsi = input("masukkan data yang ingin diubah: ")
-                        key = ui.cari_key(opsi, data_akun[index])
-                        baru = input("Masukkan data baru: ")
-                        data_akun[index][key] = baru
-                        penyimpanan.save_csv(data_akun)
-                        print(f"Data {opsi} berhasil dirubah menjadi, {baru}")
-                    except Exception as e:
-                        print(f"\nTerjadi error: {e}")
-                        print(f"Tipe error: {type(e)}")
-                        continue
+                    while True:
+                        try:
+                            pilih = int(input("\nData ke berapa yang akan dirubah: "))
+                            index = pilih - 1
+                            opsi = input("masukkan data yang ingin diubah: ")
+                            key = ui.cari_key(opsi, data_akun[index])
+                            if key is None:
+                                print(f"Data {opsi} tidak ditemukan!")
+                                continue
+                            baru = input("Masukkan data baru: ")
+                            data_akun[index][key] = baru
+                            penyimpanan.save_csv(data_akun)
+                            print(f"Data {opsi} berhasil dirubah menjadi, {baru}")
+                            if ui.selesai():
+                                break
+                        except Exception as e:
+                            print(f"\nTerjadi error: {e}")
+                            print(f"Tipe error: {type(e)}")
+                            continue
                 elif ubah in ["back", "b"]:
                     break
                 else:

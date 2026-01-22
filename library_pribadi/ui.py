@@ -31,7 +31,41 @@ def ada_tidak(dicari, data):
         for key, value in cari.items():
             if value == dicari:
                 return True
-     
+
+
+def menyimpan_file(data):
+    import json
+    import openpyxl
+    import csv
+    import pandas as pd
+    while True:
+        print("format di dukung (json, csv, excel)")
+        nama_file = input("Masukkan nama file: ")
+        folder = os.path.dirname(os.path.abspath(__file__))
+        alamat =os.path.join(folder, nama_file) 
+        if "csv" in nama_file:
+            simpan = data.to_csv(alamat)
+            return simpan
+        elif "json" in nama_file:
+            simpan = data.to_json(alamat)
+            return simpan
+        elif "xlsx" in nama_file:
+            simpan = data.to_excel(alamat)
+            return simpan
+        else:
+            print("format tidak valid")
+            continue
+
+
+if __name__ == "__main__":
+    import requests
+    import pandas as pd
+    url = "https://api.sampleapis.com/coffee/hot"
+    respon = requests.get(url)
+    data_kopi = respon.json()
+    df = pd.DataFrame(data_kopi)
+    data_latte = df.loc[df['title'].str.contains('Latte'), ['title', 'description', 'id']]
+    menyimpan_file(data_latte)
 
 """
 import sys

@@ -111,10 +111,26 @@ def _(plt, sumbu_x, sumbu_y):
 
 
 @app.cell
+def _(mo):
+    mo.md(r"""
+    menyimpan data sebaran usia
+    """)
+    return
+
+
+@app.cell
 def _(df):
     sebaran_usia = df['usia']
     print(sebaran_usia)
     return (sebaran_usia,)
+
+
+@app.cell
+def _(mo):
+    mo.md(r"""
+    visualisasi data sebaran usia (histogram)
+    """)
+    return
 
 
 @app.cell

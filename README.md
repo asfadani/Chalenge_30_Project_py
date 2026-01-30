@@ -13,6 +13,7 @@ Repository ini berisi dokumentasi perjalanan saya menyelesaikan tantangan coding
 | 05 | Strings | The Hangman Game | selesai |
 | 06 | File Handling | Password Generator (local storage) Day_03 | selesai |
 | 07 | API | Leads Generator | selesai |
+| 08 | Data Visualisasi | Leads Generator (Dashboard) | selesai |
 | ... | ... | ... | ... |
 | 30 | Final Project | Expense Tracker App |  |
 

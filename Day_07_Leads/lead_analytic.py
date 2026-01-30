@@ -1,6 +1,6 @@
 import marimo
 
-__generated_with = "0.19.4"
+__generated_with = "0.19.7"
 app = marimo.App()
 
 
@@ -8,12 +8,9 @@ app = marimo.App()
 def _():
     import requests
     import json
-    import openpyxl
     import pandas as pd
     import sys
     import os
-    sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-    from library_pribadi import ui
     return os, pd, requests
 
 
@@ -94,7 +91,7 @@ def _(data_final, os):
         folder = os.path.dirname(os.path.abspath(__file__))
         alamat =os.path.join(folder, 'Marketing_Target_List.csv') 
         simpan = data_final.to_csv(alamat, index=False)
-        print(f"\nData EXCEL berhasil disimpan di {alamat}!")
+        print(f"\nData CSV berhasil disimpan di {alamat}!")
     except Exception as e:
         print(f"Terjadi error: {e}")
         print(f"Tipe error: {type(e)}")

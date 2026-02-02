@@ -5,3 +5,4 @@ __pychace__/
 .DS_Store
 learning/
 *.db
+*tes.py

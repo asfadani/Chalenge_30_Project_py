@@ -14,12 +14,14 @@ Repository ini berisi dokumentasi perjalanan saya menyelesaikan tantangan coding
 | 06 | File Handling | Password Generator (local storage) Day_03 | selesai |
 | 07 | API | Leads Generator | selesai |
 | 08 | Data Visualisasi | Leads Generator (Dashboard) | selesai |
+| 08 | Database | Pipline (API, DB, Visualisai) | selesai |
 | ... | ... | ... | ... |
-| 30 | Final Project | Expense Tracker App |  |
+| 30 | ... | ... | ... |
 
-*(Catatan: Update tabel ini setiap kali Anda menyelesaikan tantangan dengan mengganti emoji)*
+(Catatan: Update tabel ini setiap kali Anda menyelesaikan tantangan dengan mengganti emoji)*
 
 ## 🛠️ Teknologi & Tools
+
 - **Bahasa:** Python 3.x
 - **Libraries:**
   - `pandas` (Data Processing)
@@ -32,5 +34,6 @@ Repository ini berisi dokumentasi perjalanan saya menyelesaikan tantangan coding
 Setiap hari memiliki foldernya masing-masing. Untuk menjalankan salah satu project:
 
 1. **Clone repository ini:**
+
    ```bash
-   git clone [https://github.com/asfadani/Chalenge_30_Project_py.git](https://github.com/asfadani/Chalenge_30_Project_py.git)
+   git clone https://github.com/asfadani/Chalenge_30_Project_py.git

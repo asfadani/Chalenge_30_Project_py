@@ -14,7 +14,7 @@ Repository ini berisi dokumentasi perjalanan saya menyelesaikan tantangan coding
 | 06 | File Handling | Password Generator (local storage) Day_03 | selesai |
 | 07 | API | Leads Generator | selesai |
 | 08 | Data Visualisasi | Leads Generator (Dashboard) | selesai |
-| 08 | Database | Pipline (API, DB, Visualisai) | selesai |
+| 08 | Database | Pipeline (API, DB, Visualisai) | selesai |
 | ... | ... | ... | ... |
 | 30 | ... | ... | ... |
 
@@ -28,6 +28,7 @@ Repository ini berisi dokumentasi perjalanan saya menyelesaikan tantangan coding
   - `requests` & `BeautifulSoup` (Web Scraping)
   - `tkinter` (GUI)
   - `sqlite3` (Database)
+  - `matplotlib` (Visualization)
 
 ## 📂 Cara Menjalankan Project
 
